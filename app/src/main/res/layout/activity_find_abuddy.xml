@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="From"
+            android:textColor="#000000"
+            android:paddingTop="8dp"/>
+        <AutoCompleteTextView
+            android:id="@+id/etFromLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select starting point"
+            android:inputType="none"
+            android:backgroundTint="#000000"
+            android:dropDownHeight="160dp"
+            android:padding="12dp"/>
+
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To"
+            android:textColor="#000000"
+            android:paddingTop="8dp"/>
+        <AutoCompleteTextView
+            android:id="@+id/etToLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select destination"
+            android:inputType="none"
+            android:backgroundTint="#000000"
+            android:dropDownHeight="160dp"
+            android:padding="12dp"/>
+
+        <EditText
+            android:id="@+id/etDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select Date"
+            android:focusable="false"
+            android:clickable="true"
+            android:padding="12dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#000000" />
+
+        <EditText
+            android:id="@+id/etTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select Time"
+            android:focusable="false"
+            android:clickable="true"
+            android:padding="12dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#000000" />
+
+        <Button
+            android:id="@+id/btnFind"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Search Buddy"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/custom_button"
+            android:textColor="#000000"/>
+    </LinearLayout>
+</ScrollView>

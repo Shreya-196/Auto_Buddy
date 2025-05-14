@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "2314551959",
+    "project_id": "metromate-a1d9f",
+    "storage_bucket": "metromate-a1d9f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:2314551959:android:f919e5f2d265a0d6b5dfd2",
+        "android_client_info": {
+          "package_name": "com.example.metromate"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZGqcxPoliFM_I7FJXIQtlCF4etYo7iac"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

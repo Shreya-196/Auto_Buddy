@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+    <TextView
+        android:id="@+id/tvTravelBuddy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Yayy! We found you your travel buddy"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- CardView centered in the screen -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/rideCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="24dp"
+        card_view:cardElevation="6dp"
+        card_view:cardCornerRadius="16dp"
+        card_view:cardBackgroundColor="#FFFFFF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:gravity="center_horizontal">
+
+            <!-- Ride Image at the top -->
+            <ImageView
+                android:id="@+id/imgRideIcon"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/found"
+            android:contentDescription="Ride Icon"
+            android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/tvBuddy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"
+                tools:ignore="DuplicateIds" />
+
+            <!-- From Location -->
+            <TextView
+                android:id="@+id/tvFromLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="From Location"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <!-- To Location -->
+            <TextView
+                android:id="@+id/tvToLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="To Location"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Time -->
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Seats Available -->
+            <TextView
+                android:id="@+id/tvSeatsAvailable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seats Available"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Call Now Button -->
+            <Button
+                android:id="@+id/btnCallNow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Call Now"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/custom_button" /> <!-- Add custom style for button -->
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

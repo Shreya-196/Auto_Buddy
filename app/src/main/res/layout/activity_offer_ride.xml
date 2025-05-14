@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- FROM Location -->
+        <TextView android:text="From Location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:paddingBottom="4dp"
+            android:textColor="@color/black"/>
+
+        <AutoCompleteTextView
+            android:id="@+id/etFromLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select starting point"
+            android:inputType="none"
+            android:backgroundTint="#000000"
+            android:dropDownHeight="160dp"
+            android:padding="12dp"/>
+
+        <!-- TO Location -->
+        <TextView android:text="To Location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:paddingTop="16dp"
+            android:paddingBottom="4dp"
+            android:textColor="@color/black"/>
+
+        <AutoCompleteTextView
+            android:id="@+id/etToLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select destination"
+            android:inputType="none"
+            android:backgroundTint="#000000"
+            android:dropDownHeight="160dp"
+            android:padding="12dp"/>
+
+        <!-- Date Picker -->
+        <TextView android:text="Date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:paddingTop="16dp"
+            android:paddingBottom="4dp"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/etDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select date"
+            android:focusable="false"
+            android:backgroundTint="#000000"
+            android:padding="12dp" />
+
+        <!-- Time Picker -->
+        <TextView android:text="Time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:paddingTop="16dp"
+            android:paddingBottom="4dp"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/etTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select time"
+            android:focusable="false"
+            android:backgroundTint="#000000"
+            android:padding="12dp" />
+
+        <!-- Name -->
+        <TextView android:text="Your Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:paddingTop="16dp"
+            android:paddingBottom="4dp"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your name"
+            android:backgroundTint="#000000"
+            android:padding="12dp" />
+
+        <!-- Phone Number -->
+        <TextView android:text="Phone Number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:paddingTop="16dp"
+            android:paddingBottom="4dp"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/etPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your phone number"
+            android:inputType="phone"
+            android:backgroundTint="#000000"
+            android:padding="12dp" />
+
+        <!-- Number of Seats -->
+        <TextView android:text="Seats Available"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:paddingTop="16dp"
+            android:paddingBottom="4dp"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/etSeats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter number of available seats"
+            android:inputType="number"
+            android:backgroundTint="#000000"
+            android:padding="12dp" />
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/btnSubmitRide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit Ride"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/custom_button" />
+    </LinearLayout>
+</ScrollView>
