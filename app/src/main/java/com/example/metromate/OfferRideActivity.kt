@@ -38,7 +38,6 @@ class OfferRideActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_offer_ride)
 
-        // Initialize views
         etFromLocation = findViewById(R.id.etFromLocation)
         etToLocation = findViewById(R.id.etToLocation)
         etDate = findViewById(R.id.etDate)
@@ -48,14 +47,10 @@ class OfferRideActivity : AppCompatActivity() {
         etSeats = findViewById(R.id.etSeats)
         val btnSubmitRide = findViewById<Button>(R.id.btnSubmitRide)
 
-        // Setup location dropdowns
         setupLocationDropdowns()
 
-        // Setup date and time pickers
         setupDatePicker()
         setupTimePicker()
-
-        // Pre-fill user data if available
         prefillUserData()
 
         btnSubmitRide.setOnClickListener {
@@ -68,8 +63,6 @@ class OfferRideActivity : AppCompatActivity() {
 
         etFromLocation.setAdapter(adapter)
         etToLocation.setAdapter(adapter)
-
-        // Show suggestions after 1 character typed
         etFromLocation.threshold = 1
         etToLocation.threshold = 1
     }
@@ -126,11 +119,9 @@ class OfferRideActivity : AppCompatActivity() {
     private fun prefillUserData() {
         val currentUser = auth.currentUser
         currentUser?.let { user ->
-            // Pre-fill name if available
             user.displayName?.let { name ->
                 etName.setText(name)
             }
-            // Pre-fill phone if available
             user.phoneNumber?.let { phone ->
                 etPhone.setText(phone)
             }

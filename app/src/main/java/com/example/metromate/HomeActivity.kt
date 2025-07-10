@@ -20,42 +20,28 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        // Initialize Firebase Auth
         auth = FirebaseAuth.getInstance()
-
-        // Get current user
         val currentUser = auth.currentUser
-
-        // Display the logged-in user's information
         val tvWelcome = findViewById<TextView>(R.id.tvWelcome)
 
         if (currentUser != null) {
-            // User is signed in
             val displayName = currentUser.displayName ?: currentUser.email ?: "User"
             tvWelcome.text = "Welcome, $displayName"
         } else {
-            // No user is signed in (shouldn't happen if you have proper auth flow)
             tvWelcome.text = "Welcome, Guest"
-            // Optionally redirect to login
             startActivity(Intent(this, LoginActivity::class.java))
             finish()
         }
-
-        // Offer a Ride Card - opens OfferARideActivity
         val offerRideCard = findViewById<CardView>(R.id.offerRide)
         offerRideCard.setOnClickListener {
             val intent = Intent(this, OfferRideActivity::class.java)
             startActivity(intent)
         }
-
-        // Find a Buddy Card - opens FindBuddyActivity
         val findBuddyCard = findViewById<CardView>(R.id.findBuddy)
         findBuddyCard.setOnClickListener {
             val intent = Intent(this, FindABuddyActivity::class.java)
             startActivity(intent)
         }
-
-        // Book Auto Card - deep links to Ola app
         val bookAutoCard = findViewById<CardView>(R.id.bookAuto)
         bookAutoCard.setOnClickListener {
             try {
@@ -70,13 +56,9 @@ class HomeActivity : AppCompatActivity() {
             }
         }
 
-        // Logout Button
         val btnLogout = findViewById<Button>(R.id.btnLogout)
         btnLogout.setOnClickListener {
-            // Sign out from Firebase
             auth.signOut()
-
-            // Return to LoginActivity
             val intent = Intent(this, LoginActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
             startActivity(intent)

@@ -12,6 +12,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import java.lang.Math.abs
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
@@ -43,14 +44,14 @@ class FindABuddyActivity : AppCompatActivity() {
         etTime = findViewById(R.id.etTime)
         btnFind = findViewById(R.id.btnFind)
 
-        // Setup location dropdowns
+
         setupLocationDropdowns()
 
-        // Setup date and time pickers
+
         setupDatePicker()
         setupTimePicker()
 
-        // Set click listener for find button
+
         btnFind.setOnClickListener {
             searchForBuddies()
         }
@@ -62,7 +63,7 @@ class FindABuddyActivity : AppCompatActivity() {
         etFromLocation.setAdapter(adapter)
         etToLocation.setAdapter(adapter)
 
-        // Show suggestions after 1 character typed
+
         etFromLocation.threshold = 1
         etToLocation.threshold = 1
     }
@@ -132,14 +133,46 @@ class FindABuddyActivity : AppCompatActivity() {
             .whereEqualTo("fromLocation", fromLocation)
             .whereEqualTo("toLocation", toLocation)
 
-        // Add date filter if provided
+
         if (date.isNotEmpty()) {
             query = query.whereEqualTo("date", date)
         }
 
-        // Add time filter if provided
+
         if (time.isNotEmpty()) {
-            query = query.whereEqualTo("time", time)
+            try {
+                val timeFormat = SimpleDateFormat("hh:mm a", Locale.getDefault())
+                val selectedTime = timeFormat.parse(time) ?: return
+
+                val selectedMinutes = selectedTime.hours * 60 + selectedTime.minutes
+
+                query.get()
+                    .addOnSuccessListener { querySnapshot ->
+                        val matchingRides = querySnapshot.documents.mapNotNull { doc ->
+                            val ride = doc.toObject(Rides::class.java)
+                            val rideTime = timeFormat.parse(ride?.time ?: "") ?: return@mapNotNull null
+                            val rideMinutes = rideTime.hours * 60 + rideTime.minutes
+
+                            if (kotlin.math.abs(rideMinutes - selectedMinutes) <= 15) ride else null
+                        }
+
+                        if (matchingRides.isEmpty()) {
+                            Toast.makeText(this, "No buddies found within 15 minutes", Toast.LENGTH_SHORT).show()
+                        } else {
+                            matchingRides.firstOrNull()?.let { ride ->
+                                openBuddyFound(ride)
+                            }
+                        }
+                    }
+                    .addOnFailureListener { e ->
+                        Toast.makeText(this, "Error searching: ${e.message}", Toast.LENGTH_SHORT).show()
+                    }
+                return
+
+            } catch (e: Exception) {
+                Toast.makeText(this, "Invalid time format", Toast.LENGTH_SHORT).show()
+                return
+            }
         }
 
         query.get()

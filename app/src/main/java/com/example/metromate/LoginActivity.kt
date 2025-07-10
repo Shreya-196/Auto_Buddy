@@ -11,10 +11,10 @@ import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity : AppCompatActivity() {
 
-    // Firebase Authentication
+
     private lateinit var auth: FirebaseAuth
 
-    // UI Components
+
     private lateinit var etEmail: EditText
     private lateinit var etPassword: EditText
     private lateinit var btnLogin: Button
@@ -24,16 +24,13 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        // Initialize Firebase Auth
         auth = FirebaseAuth.getInstance()
 
-        // Initialize views
         etEmail = findViewById(R.id.username)
         etPassword = findViewById(R.id.password)
         btnLogin = findViewById(R.id.loginButton)
         tvSignUp = findViewById(R.id.signupText)
 
-        // Login button click listener
         btnLogin.setOnClickListener {
             val email = etEmail.text.toString().trim()
             val password = etPassword.text.toString().trim()
@@ -43,9 +40,8 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
-        // Sign up text click listener
+
         tvSignUp.setOnClickListener {
-            // Navigate to Register Activity
             startActivity(Intent(this, RegisterActivity::class.java))
         }
     }

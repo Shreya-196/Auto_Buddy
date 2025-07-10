@@ -11,10 +11,8 @@ import com.google.firebase.firestore.FirebaseFirestore
 
 class RegisterActivity : AppCompatActivity() {
 
-    // Firebase components
     private lateinit var auth: FirebaseAuth
 
-    // UI components
     private lateinit var etEmail: EditText
     private lateinit var etPassword: EditText
     private lateinit var etConfirmPassword: EditText
@@ -24,16 +22,14 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
-        // Initialize Firebase instances
+
         auth = FirebaseAuth.getInstance()
 
-        // Initialize views
         etEmail = findViewById(R.id.username)
         etPassword = findViewById(R.id.password)
         etConfirmPassword = findViewById(R.id.confirmpassword)
         btnRegister = findViewById(R.id.loginButton)
 
-        // Set click listener for register button
         btnRegister.setOnClickListener {
             val email = etEmail.text.toString().trim()
             val password = etPassword.text.toString().trim()
@@ -46,7 +42,6 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     private fun validateInputs(email: String, password: String, confirmPassword: String): Boolean {
-        // Email validation
         if (email.isEmpty()) {
             etEmail.error = "Email is required"
             etEmail.requestFocus()
@@ -63,8 +58,6 @@ class RegisterActivity : AppCompatActivity() {
             etEmail.requestFocus()
             return false
         }
-
-        // Password validation
         if (password.isEmpty()) {
             etPassword.error = "Password is required"
             etPassword.requestFocus()
@@ -76,8 +69,6 @@ class RegisterActivity : AppCompatActivity() {
             etPassword.requestFocus()
             return false
         }
-
-        // Confirm password validation
         if (confirmPassword.isEmpty()) {
             etConfirmPassword.error = "Please confirm your password"
             etConfirmPassword.requestFocus()
