@@ -1,0 +1,1 @@
+java>new menu directory>new menu resource file named "menu_main.xml"

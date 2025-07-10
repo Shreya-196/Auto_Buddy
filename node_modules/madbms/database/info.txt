@@ -1,0 +1,4 @@
+right click your package (com.example.database) -> new -> kotlin class/file -> file -> Databasehelper.kt
+
+
+layout->dialog_update_student.xml

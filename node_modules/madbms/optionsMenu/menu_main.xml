@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/overflowMenu"
+        android:icon="@drawable/menu"
+        android:title=""
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/settings"
+                android:icon="@drawable/setting"
+                android:title="SETTINGS"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/about"
+                android:icon="@drawable/about"
+                android:title="ABOUT"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/exit"
+                android:icon="@drawable/exit"
+                android:title="EXIT"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+</menu>

@@ -1,0 +1,2 @@
+res -> new -> android resource directory -> type= anim
+add new animation resource file

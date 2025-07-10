@@ -1,0 +1,6 @@
+Saving content in another file
+
+
+add this in manifest before closing of application
+
+<activity android:name=".SecondActivity" />

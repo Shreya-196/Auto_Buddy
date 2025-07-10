@@ -1,0 +1,1 @@
+java > fragment > blankfragment > automatic kt and its corresponding xml created
