@@ -35,21 +35,12 @@ Built with **Android Studio (Kotlin)** and **Firebase**, AutoBuddy connects peop
 ---
 
 ## 📸 Screenshots  
-| Home Screen | Ride Match | Fare Split |
-|-------------|-----------|-----------|
-| ![Home](<img width="357" height="730" alt="image" src="https://github.com/user-attachments/assets/8e4df3fc-c3f5-4609-abf1-3f5cfb48a025" />
-) | ![Match](screenshot-match.png) | ![Fare](screenshot-fare.png) |
+<img width="357" height="730" alt="image" src="https://github.com/user-attachments/assets/a8802dec-e924-4c6a-b199-f7784b13bc8d" />
 
-*(Replace the above with actual screenshots)*  
+<img width="381" height="768" alt="image" src="https://github.com/user-attachments/assets/9090fbbc-563f-48ae-8e28-3a4b06e6cd7d" />
+
+<img width="369" height="767" alt="image" src="https://github.com/user-attachments/assets/afd4ab44-3e84-424a-ba7e-4b92984309c4" />
+
+<img width="352" height="734" alt="image" src="https://github.com/user-attachments/assets/70263c7d-b411-44a3-8029-26162a67c151" />
 
 ---
-
-## 🚀 Setup Instructions
-```bash
-# 1. Clone the repository
-git clone <repo-url>
-
-# 2. Open in Android Studio
-# 3. Connect to your Firebase project (Tools → Firebase)
-# 4. Add your Google Maps API key in local.properties
-# 5. Build and run on an emulator or physical device
