@@ -1,4 +1,4 @@
-<h1 align="center">🚗 AutoBuddy – College Auto Sharing App</h1>
+<h1 align="center">🛺 AutoBuddy – College Auto Sharing App</h1>
 
 <p align="center">
   <i>Share rides. Save money. Travel together.</i>
@@ -8,7 +8,6 @@
   <img src="https://img.shields.io/badge/Platform-Android-green?style=for-the-badge">
   <img src="https://img.shields.io/badge/Language-Kotlin-purple?style=for-the-badge">
   <img src="https://img.shields.io/badge/Backend-Firebase-orange?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Maps-Google%20Maps%20API-blue?style=for-the-badge">
 </p>
 
 ---
@@ -22,25 +21,24 @@ Built with **Android Studio (Kotlin)** and **Firebase**, AutoBuddy connects peop
 
 ## ✨ Features
 - 📍 **Find Ride Partners** – Match with students going to the same location  
-- 💰 **Suggested Fare Split** – Calculate and suggest a fair fare per person  
-- 🗺 **Live Location Sharing** – Optional sharing for easier meet-ups  
+- 🛺 **DeepLinking** – Book auto directly with OLA App connected
 - 📅 **Ride Scheduling** – Plan your rides in advance  
 - 🔐 **Secure Login** – Firebase Authentication for verified access  
 
 ---
 
 ## 🛠 Tech Stack
-- **Frontend:** Kotlin (Android Studio)  
+- **Frontend:** Kotlin (Android Studio - Dolphin Version)
 - **Backend & Auth:** Firebase Authentication  
-- **Database:** Firebase Firestore  
-- **Other:** Google Maps API (routes & location services)  
-
+- **Database:** Firebase Firestore
+  
 ---
 
 ## 📸 Screenshots  
 | Home Screen | Ride Match | Fare Split |
 |-------------|-----------|-----------|
-| ![Home](screenshot-home.png) | ![Match](screenshot-match.png) | ![Fare](screenshot-fare.png) |
+| ![Home](<img width="357" height="730" alt="image" src="https://github.com/user-attachments/assets/8e4df3fc-c3f5-4609-abf1-3f5cfb48a025" />
+) | ![Match](screenshot-match.png) | ![Fare](screenshot-fare.png) |
 
 *(Replace the above with actual screenshots)*  
 
